@@ -12,8 +12,7 @@ class CursosController extends Controller
     );
 
     public function index() {
-      $cursos = SELF::CURSOS;
-      return view('cursos.index', compact('cursos'));
+      return view('cursos.index', ['cursos' => SELF::CURSOS]);
     }
 
     public function show($index) {
